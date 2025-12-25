@@ -25,6 +25,16 @@ description: "Task list template for feature implementation"
 - **Mobile**: `api/src/`, `ios/src/` or `android/src/`
 - Paths shown below assume single project - adjust based on plan.md structure
 
+## Constitutional Compliance Checks
+
+Before task execution, ensure each task:
+
+- [ ] Aligns with Spec-Driven Development: Each task is traceable to approved specification
+- [ ] Follows Agent-Centric Development: Tasks must be implementable by AI agents without human coding
+- [ ] Uses Required Technology Stack: Python, Next.js, FastAPI, SQLModel, Neon DB, and MCP
+- [ ] Maintains Phase Governance: No future-phase features included in current phase tasks
+- [ ] Meets Quality Assurance Standards: Testing and validation requirements included
+
 <!-- 
   ============================================================================
   IMPORTANT: The tasks below are SAMPLE TASKS for illustration purposes only.

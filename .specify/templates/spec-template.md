@@ -80,6 +80,11 @@
 <!--
   ACTION REQUIRED: The content in this section represents placeholders.
   Fill them out with the right functional requirements.
+
+  CONSTITUTIONAL COMPLIANCE: All requirements must align with the project constitution:
+  - Technology stack must use Python, Next.js, FastAPI, SQLModel, Neon DB, and MCP
+  - No future-phase features may be included
+  - Agent-centric development: requirements must be implementable without human coding
 -->
 
 ### Functional Requirements

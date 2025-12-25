@@ -31,7 +31,11 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- [ ] Spec-Driven Development: Confirm all work is based on approved specification
+- [ ] Agent-Centric Development: Verify implementation will be done by AI agent without human coding
+- [ ] Technology Stack Compliance: Confirm tech stack aligns with constitution (Python, Next.js, FastAPI, SQLModel, Neon DB, MCP)
+- [ ] Quality Assurance Standards: Verify testing approach meets constitutional requirements
+- [ ] Phase Governance: Ensure no future-phase features leak into current phase
 
 ## Project Structure
 
