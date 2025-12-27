@@ -17,12 +17,11 @@ origins = [
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,            # Allows your frontend
-    allow_credentials=True,           # Required for Better Auth cookies/tokens
-    allow_methods=["*"],              # Allows GET, POST, PUT, DELETE
-    allow_headers=["*"],              # Allows all headers
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
-
 # Include routers
 app.include_router(auth_router, prefix="/api/auth", tags=["auth"])
 app.include_router(todos_router, prefix="/api/todos", tags=["todos"])
