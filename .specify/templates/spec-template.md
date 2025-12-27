@@ -82,7 +82,9 @@
   Fill them out with the right functional requirements.
 
   CONSTITUTIONAL COMPLIANCE: All requirements must align with the project constitution:
-  - Technology stack must use Python, Next.js, FastAPI, SQLModel, Neon DB, and MCP
+  - Phase I: In-memory console application only
+  - Phase II: Python REST API, Neon Serverless PostgreSQL, SQLModel, Next.js, Better Auth (signup/signin)
+  - Phase III+: Advanced cloud infrastructure, agents, AI allowed
   - No future-phase features may be included
   - Agent-centric development: requirements must be implementable without human coding
 -->

@@ -31,7 +31,7 @@ Before task execution, ensure each task:
 
 - [ ] Aligns with Spec-Driven Development: Each task is traceable to approved specification
 - [ ] Follows Agent-Centric Development: Tasks must be implementable by AI agents without human coding
-- [ ] Uses Required Technology Stack: Python, Next.js, FastAPI, SQLModel, Neon DB, and MCP
+- [ ] Uses Required Technology Stack: Phase I: console only; Phase II: Python REST API, Neon Serverless PostgreSQL, SQLModel, Next.js, Better Auth; Phase III+: AI/agents allowed
 - [ ] Maintains Phase Governance: No future-phase features included in current phase tasks
 - [ ] Meets Quality Assurance Standards: Testing and validation requirements included
 

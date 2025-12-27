@@ -33,7 +33,7 @@
 
 - [ ] Spec-Driven Development: Confirm all work is based on approved specification
 - [ ] Agent-Centric Development: Verify implementation will be done by AI agent without human coding
-- [ ] Technology Stack Compliance: Confirm tech stack aligns with constitution (Python, Next.js, FastAPI, SQLModel, Neon DB, MCP)
+- [ ] Technology Stack Compliance: Confirm tech stack aligns with constitution (Phase I: console only; Phase II: Python REST API, Neon Serverless PostgreSQL, SQLModel, Next.js, Better Auth; Phase III+: AI/agents allowed)
 - [ ] Quality Assurance Standards: Verify testing approach meets constitutional requirements
 - [ ] Phase Governance: Ensure no future-phase features leak into current phase
 
