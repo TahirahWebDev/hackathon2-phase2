@@ -9,7 +9,7 @@ from ..models.todo import Todo
 from sqlmodel import SQLModel
 from ..database.database import engine
 
-app = FastAPI(title="Todo API", version="0.1.0")
+app = FastAPI(title="Todo API", version="0.1.0", redirect_slashes=False)
 
 origins = [
     "http://localhost:3000",

@@ -55,7 +55,7 @@ def get_current_user_id(credentials: HTTPAuthorizationCredentials = Security(sec
         raise credentials_exception
 
 
-@router.get("/", response_model=List[TodoResponse])
+@router.get("", response_model=List[TodoResponse])
 def get_todos(
     session: Session = Depends(get_session),
     current_user_id: int = Security(get_current_user_id)
@@ -64,7 +64,7 @@ def get_todos(
     return todos
 
 
-@router.post("/", response_model=TodoResponse)
+@router.post("", response_model=TodoResponse)
 def create_todo(
     request: TodoCreateRequest,
     session: Session = Depends(get_session),
