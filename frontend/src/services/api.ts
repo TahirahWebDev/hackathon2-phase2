@@ -1,6 +1,7 @@
 // frontend/src/services/api.ts
-import axios, { type AxiosInstance, type InternalAxiosRequestConfig } from 'axios';
+import axios, { type AxiosInstance } from 'axios';
 
+// Interfaces are already exported here, no need to export them at the bottom
 export interface Todo {
   id: number;
   title: string;
@@ -29,7 +30,6 @@ class ApiService {
   private token: string | null = null;
 
   constructor() {
-    // Initialize the API client with base configuration
     this.api = axios.create({
       baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api',
       headers: {
@@ -37,7 +37,6 @@ class ApiService {
       },
     });
 
-    // Add request interceptor to include auth token
     this.api.interceptors.request.use(
       (config) => {
         if (this.token) {
@@ -45,17 +44,13 @@ class ApiService {
         }
         return config;
       },
-      (error) => {
-        return Promise.reject(error);
-      }
+      (error) => Promise.reject(error)
     );
 
-    // Add response interceptor to handle token expiration
     this.api.interceptors.response.use(
       (response) => response,
       (error) => {
         if (error.response?.status === 401) {
-          // Token might be expired, clear it
           this.clearToken();
         }
         return Promise.reject(error);
@@ -63,17 +58,14 @@ class ApiService {
     );
   }
 
-  // Set authentication token
   setToken(token: string) {
     this.token = token;
   }
 
-  // Clear authentication token
   clearToken() {
     this.token = null;
   }
 
-  // Authentication methods
   async signup(email: string, password: string): Promise<User> {
     const response = await this.api.post('/auth/signup', { email, password });
     return response.data;
@@ -87,11 +79,15 @@ class ApiService {
   }
 
   async signout(): Promise<void> {
-    await this.api.post('/auth/signout');
-    this.clearToken();
+    // Some backends don't have a signout endpoint if using stateless JWT, 
+    // but keeping it as per your original structure.
+    try {
+      await this.api.post('/auth/signout');
+    } finally {
+      this.clearToken();
+    }
   }
 
-  // Todo methods
   async getTodos(): Promise<Todo[]> {
     const response = await this.api.get('/todos');
     return response.data;
@@ -117,5 +113,6 @@ class ApiService {
   }
 }
 
+// Fixed: Export only the default instance. 
+// The interfaces are already exported individually above.
 export default new ApiService();
-export type { Todo, User, TokenResponse };
